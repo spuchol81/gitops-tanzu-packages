@@ -1,5 +1,5 @@
 ---
-infrastructure_provider: vsphere
+infrastructure_provider: aws
 namespace: tanzu-system-ingress
 contour:
  configFileContents: {}
@@ -15,6 +15,8 @@ envoy:
      http: null
      https: null
    externalTrafficPolicy: Cluster
+   aws:
+     LBType: classic
    disableWait: false
  hostPorts:
    enable: true
