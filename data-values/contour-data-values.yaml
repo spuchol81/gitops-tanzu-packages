@@ -16,7 +16,7 @@ envoy:
      https: null
    externalTrafficPolicy: Cluster
    aws:
-     LBType: classic
+     LBType: nlb
    disableWait: false
  hostPorts:
    enable: true
