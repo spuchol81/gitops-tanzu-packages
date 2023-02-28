@@ -5,6 +5,9 @@ metadata:
     tkg.tanzu.vmware.com/tanzu-package-ClusterRole: cert-manager-packages-cluster-role
     tkg.tanzu.vmware.com/tanzu-package-ClusterRoleBinding: cert-manager-packages-cluster-rolebinding
     tkg.tanzu.vmware.com/tanzu-package-ServiceAccount: cert-manager-packages-sa
+    kapp.k14s.io/change-group: "cert-manager"
+    kapp.k14s.io/change-rule.create-order: "upsert after upserting packageinstall-setup"
+    kapp.k14s.io/change-rule.delete-order: "delete before deleting packageinstall-setup"
   name: cert-manager
   namespace: cert-manager
 spec:
